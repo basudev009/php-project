@@ -1,0 +1,199 @@
+/* Custom animation keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInFromLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Global body and typography styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Use a full HD background image or a solid color as a fallback */
+    background-image: url('https://source.unsplash.com/1600x900/?voting,election,ballot');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f0f8ff; /* A light, soft blue color */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+#headerSection {
+    background-color: rgba(70, 130, 180, 0.9); /* A steel blue with transparency */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    animation: fadeIn 1s ease-out; /* Apply a fade-in animation */
+}
+
+#headerSection h1 {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Main content container with animation */
+#bodySection {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 600px;
+    margin: 120px auto 40px;
+    text-align: center;
+    animation: slideInFromLeft 1s ease-out; /* Apply a slide-in animation from the left */
+}
+
+#bodySection h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #4682b4; /* Steel blue color */
+    font-weight: 400;
+}
+
+/* Form input and dropdown styling */
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+#address,
+select {
+    width: 100%;
+    padding: 12px 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #4682b4;
+    box-shadow: 0 0 8px rgba(70, 130, 180, 0.5);
+    outline: none;
+    transform: scale(1.02);
+}
+
+/* Specific styling for the 'previous' button */
+
+
+#previous a {
+    text-decoration: none;
+    color: #333;
+}
+
+#previous:hover {
+    background-color: #e0e0e0;
+}
+
+/* Image upload and role selection containers */
+#imagepart, #role {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: left;
+    animation: fadeIn 0.8s ease-out; /* Add a fade-in animation to these elements */
+}
+
+#imagepart span, #role span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#imagepart input[type="file"] {
+    width: auto;
+    border: none;
+    padding: 0;
+}
+
+#role select {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* Register button styling with hover and active animations */
+#loginbtn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #28a745; /* Green for success/register */
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    animation: pulse 2s infinite alternate; /* Add a subtle pulse animation */
+}
+
+#loginbtn:hover {
+    background-color: #218838;
+}
+
+#loginbtn:active {
+    background-color: #1e7e34;
+    transform: translateY(1px);
+}
+
+/* Link styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Footer styling */
+footer {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #bbb;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    animation: fadeIn 1s ease-out; /* Apply a fade-in animation */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
